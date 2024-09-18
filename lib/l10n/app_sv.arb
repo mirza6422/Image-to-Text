@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR-skanner",
+  "saveFiles": "Filer sparades framgångsrikt!",
+  "errorSaving": "Kunde inte spara filer",
+  "openFile": "Öppna",
+  "imageSelection": "Välj en bild eller använd kameran",
+  "gallery": "Galleri",
+  "camera": "Kamera",
+  "errorCapturing": "Fel vid bildinspelning",
+  "errorGallery": "Fel vid val av bild",
+  "languageIcon": "App-språk",
+  "text": "Identifierad text",
+  "errorText": "Fel vid textigenkänning",
+  "txt": "Spara som TXT",
+  "pdf": "Spara som PDF",
+  "docx": "Spara som DOC",
+  "noSave": "Ingen text att spara",
+  "save": "Spara"
+}

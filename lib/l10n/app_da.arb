@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Scanner",
+  "saveFiles": "Filer gemt med succes!",
+  "errorSaving": "Kunne ikke gemme filer",
+  "openFile": "Åbn",
+  "imageSelection": "Vælg et billede eller brug kameraet",
+  "gallery": "Galleri",
+  "camera": "Kamera",
+  "errorCapturing": "Fejl ved indfangelse af billede",
+  "errorGallery": "Fejl ved valg af billede",
+  "languageIcon": "App Sprog",
+  "text": "Genkendt tekst",
+  "errorText": "Fejl ved genkendelse af tekst",
+  "txt": "Gem som TXT",
+  "pdf": "Gem som PDF",
+  "docx": "Gem som DOC",
+  "noSave": "Ingen tekst at gemme",
+  "save": "Gem"
+}

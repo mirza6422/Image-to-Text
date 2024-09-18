@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Szkenner",
+  "saveFiles": "A fájlok sikeresen mentésre kerültek!",
+  "errorSaving": "A fájlok mentése sikertelen",
+  "openFile": "Megnyitás",
+  "imageSelection": "Kérem, válasszon egy képet, vagy használja a kamerát",
+  "gallery": "Galéria",
+  "camera": "Kamera",
+  "errorCapturing": "Hiba a kép rögzítésekor",
+  "errorGallery": "Hiba a kép kiválasztásakor",
+  "languageIcon": "Alkalmazásnyelvek",
+  "text": "Felismert szöveg",
+  "errorText": "Hiba a szövegfelismerés során",
+  "txt": "Mentés TXT formátumban",
+  "pdf": "Mentés PDF formátumban",
+  "docx": "Mentés DOC formátumban",
+  "noSave": "Nincs menteni való szöveg",
+  "save": "Mentés"
+}

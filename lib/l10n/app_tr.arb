@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Tarayıcı",
+  "saveFiles": "Dosyalar başarıyla kaydedildi!",
+  "errorSaving": "Dosyalar kaydedilemedi",
+  "openFile": "Aç",
+  "imageSelection": "Lütfen bir resim seçin veya Kamera kullanın",
+  "gallery": "Galeri",
+  "camera": "Kamera",
+  "errorCapturing": "Resim yakalanırken hata oluştu",
+  "errorGallery": "Resim seçilirken hata oluştu",
+  "languageIcon": "Uygulama Dilleri",
+  "text": "Tanınan Metin",
+  "errorText": "Metin tanıma hatası",
+  "txt": "TXT olarak kaydet",
+  "pdf": "PDF olarak kaydet",
+  "docx": "DOC olarak kaydet",
+  "noSave": "Kaydedilecek metin yok",
+  "save": "Kaydet"
+}

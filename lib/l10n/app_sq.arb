@@ -1,0 +1,19 @@
+{
+  "appBar": "Skanner OCR",
+  "saveFiles": "Skedarët u ruajtën me sukses!",
+  "errorSaving": "Ruajtja e skedarëve dështoi",
+  "openFile": "Hap",
+  "imageSelection": "Ju lutemi zgjidhni një imazh ose përdorni kamerën",
+  "gallery": "Galeria",
+  "camera": "Kamera",
+  "errorCapturing": "Gabim gjatë kapjes së imazhit",
+  "errorGallery": "Gabim gjatë zgjedhjes së imazhit",
+  "languageIcon": "Gjuhët e aplikacionit",
+  "text": "Teksti i njohur",
+  "errorText": "Gabim në njohjen e tekstit",
+  "txt": "Ruaj si TXT",
+  "pdf": "Ruaj si PDF",
+  "docx": "Ruaj si DOC",
+  "noSave": "Nuk ka tekst për të ruajtur",
+  "save": "Ruaj"
+}

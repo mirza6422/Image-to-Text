@@ -1,0 +1,19 @@
+{
+  "appBar": "ኦሲአር ስካነር",
+  "saveFiles": "ፋይሎች በትክክል ተቀምጠዋል!",
+  "errorSaving": "ፋይሎች መመዝገብ አልተቻለም",
+  "openFile": "ክፈት",
+  "imageSelection": "እባክዎን ምስል ይምረጡ ወይም ካሜራን ይጠቀሙ",
+  "gallery": "ጋለሪ",
+  "camera": "ካሜራ",
+  "errorCapturing": "ምስል ማንሳት አልተሳካም",
+  "errorGallery": "ምስል መምረጥ አልተሳካም",
+  "languageIcon": "አፕ ቋንቋዎች",
+  "text": "ተረጋገጠ ጽሑፍ",
+  "errorText": "በጽሑፍ ማስመለከት ላይ ስህተት",
+  "txt": "ማስቀመጥ በ TXT",
+  "pdf": "ማስቀመጥ በ PDF",
+  "docx": "ማስቀመጥ በ DOC",
+  "noSave": "ምንም ጽሑፍ ለማስቀመጥ የለም",
+  "save": "መዝግብ"
+}

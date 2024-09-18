@@ -1,0 +1,19 @@
+{
+  "appBar": "Máy quét OCR",
+  "saveFiles": "Các tệp đã được lưu thành công!",
+  "errorSaving": "Không thể lưu các tệp",
+  "openFile": "Mở",
+  "imageSelection": "Vui lòng chọn một hình ảnh hoặc sử dụng Camera",
+  "gallery": "Thư viện",
+  "camera": "Máy ảnh",
+  "errorCapturing": "Lỗi khi chụp ảnh",
+  "errorGallery": "Lỗi khi chọn hình ảnh",
+  "languageIcon": "Ngôn ngữ ứng dụng",
+  "text": "Văn bản đã nhận dạng",
+  "errorText": "Lỗi trong việc nhận dạng văn bản",
+  "txt": "Lưu dưới dạng TXT",
+  "pdf": "Lưu dưới dạng PDF",
+  "docx": "Lưu dưới dạng DOC",
+  "noSave": "Không có văn bản để lưu",
+  "save": "Lưu"
+}

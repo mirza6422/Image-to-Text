@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR-skanneri",
+  "saveFiles": "Tiedostot tallennettu onnistuneesti!",
+  "errorSaving": "Tiedostojen tallennus epäonnistui",
+  "openFile": "Avaa",
+  "imageSelection": "Valitse kuva tai käytä kameraa",
+  "gallery": "Galleria",
+  "camera": "Kamera",
+  "errorCapturing": "Virhe kuvan tallentamisessa",
+  "errorGallery": "Virhe kuvan valinnassa",
+  "languageIcon": "Sovelluskielet",
+  "text": "Tunnistettu teksti",
+  "errorText": "Virhe tekstin tunnistamisessa",
+  "txt": "Tallenna TXT:nä",
+  "pdf": "Tallenna PDF:nä",
+  "docx": "Tallenna DOC:na",
+  "noSave": "Ei tekstiä tallennettavaksi",
+  "save": "Tallenna"
+}

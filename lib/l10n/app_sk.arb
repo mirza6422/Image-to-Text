@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skenovanie",
+  "saveFiles": "Súbory boli úspešne uložené!",
+  "errorSaving": "Súbory sa nepodarilo uložiť",
+  "openFile": "Otvoriť",
+  "imageSelection": "Vyberte obrázok alebo použite kameru",
+  "gallery": "Galéria",
+  "camera": "Kamera",
+  "errorCapturing": "Chyba pri zachytávaní obrázka",
+  "errorGallery": "Chyba pri výbere obrázka",
+  "languageIcon": "Jazyky aplikácie",
+  "text": "Rozpoznaný text",
+  "errorText": "Chyba pri rozpoznávaní textu",
+  "txt": "Uložiť ako TXT",
+  "pdf": "Uložiť ako PDF",
+  "docx": "Uložiť ako DOC",
+  "noSave": "Nie je žiadny text na uloženie",
+  "save": "Uložiť"
+}

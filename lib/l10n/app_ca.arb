@@ -1,0 +1,19 @@
+{
+  "appBar": "Escàner OCR",
+  "saveFiles": "Fitxers desats correctament!",
+  "errorSaving": "Error en desar els fitxers",
+  "openFile": "Obrir",
+  "imageSelection": "Si us plau, seleccioneu una imatge o utilitzeu la càmera",
+  "gallery": "Galeria",
+  "camera": "Càmera",
+  "errorCapturing": "Error en capturar la imatge",
+  "errorGallery": "Error en seleccionar la imatge",
+  "languageIcon": "Idiomes de l'aplicació",
+  "text": "Text reconegut",
+  "errorText": "Error en reconèixer el text",
+  "txt": "Desa com TXT",
+  "pdf": "Desa com PDF",
+  "docx": "Desa com DOC",
+  "noSave": "No hi ha text per desar",
+  "save": "Desa"
+}

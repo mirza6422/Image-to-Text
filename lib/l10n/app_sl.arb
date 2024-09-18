@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Optično branje",
+  "saveFiles": "Datoteke so bile uspešno shranjene!",
+  "errorSaving": "Datotek ni bilo mogoče shraniti",
+  "openFile": "Odpri",
+  "imageSelection": "Izberite sliko ali uporabite kamero",
+  "gallery": "Galerija",
+  "camera": "Kamera",
+  "errorCapturing": "Napaka pri zajemanju slike",
+  "errorGallery": "Napaka pri izbiri slike",
+  "languageIcon": "Jeziki aplikacije",
+  "text": "Prepoznano besedilo",
+  "errorText": "Napaka pri prepoznavanju besedila",
+  "txt": "Shrani kot TXT",
+  "pdf": "Shrani kot PDF",
+  "docx": "Shrani kot DOC",
+  "noSave": "Ni besedila za shranjevanje",
+  "save": "Shrani"
+}

@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Scanner",
+  "saveFiles": "Dateie erfolgrich gspycheret!",
+  "errorSaving": "Dateie chönd nöd gspycheret wäre",
+  "openFile": "Ufemache",
+  "imageSelection": "Bitte wehl es Bild us oder bruch d Kamera",
+  "gallery": "Galerie",
+  "camera": "Kamera",
+  "errorCapturing": "Fähler bim Ufneh vom Bild",
+  "errorGallery": "Fähler bim Uuswehle vom Bild",
+  "languageIcon": "App-Sproche",
+  "text": "Erkannti Text",
+  "errorText": "Fähler bim Texterkenne",
+  "txt": "Als TXT spycherä",
+  "pdf": "Als PDF spycherä",
+  "docx": "Als DOC spycherä",
+  "noSave": "Kei Text zum Spycherä",
+  "save": "Spycherä"
+}

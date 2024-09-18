@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skaner",
+  "saveFiles": "Fayllar uğurla yadda saxlanıldı!",
+  "errorSaving": "Faylları yadda saxlamaq mümkün olmadı",
+  "openFile": "Aç",
+  "imageSelection": "Zəhmət olmasa, bir şəkil seçin və ya kameradan istifadə edin",
+  "gallery": "Qalereya",
+  "camera": "Kamera",
+  "errorCapturing": "Şəklin çəkilməsində səhv",
+  "errorGallery": "Şəklin seçilməsində səhv",
+  "languageIcon": "Tətbiq Dilləri",
+  "text": "Tanınan Mətn",
+  "errorText": "Mətni tanımaqda səhv",
+  "txt": "TXT olaraq saxla",
+  "pdf": "PDF olaraq saxla",
+  "docx": "DOC olaraq saxla",
+  "noSave": "Saxlanılacaq mətn yoxdur",
+  "save": "Yadda saxla"
+}

@@ -1,0 +1,19 @@
+{
+  "appBar": "Sganer OCR",
+  "saveFiles": "Ffeiliau wedi’u cadw’n llwyddiannus!",
+  "errorSaving": "Methwyd cadw ffeiliau",
+  "openFile": "Agor",
+  "imageSelection": "Dewiswch ddelwedd neu defnyddiwch Gamera",
+  "gallery": "Oriel",
+  "camera": "Camera",
+  "errorCapturing": "Gwall wrth gipio delwedd",
+  "errorGallery": "Gwall wrth ddewis delwedd",
+  "languageIcon": "Ieithoedd Ap",
+  "text": "Testun a Gydnabuwyd",
+  "errorText": "Gwall wrth gydnabod testun",
+  "txt": "Cadw fel TXT",
+  "pdf": "Cadw fel PDF",
+  "docx": "Cadw fel DOC",
+  "noSave": "Dim testun i’w gadw",
+  "save": "Cadw"
+}

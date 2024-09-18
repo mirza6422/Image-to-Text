@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skaitytuvas",
+  "saveFiles": "Failai sėkmingai išsaugoti!",
+  "errorSaving": "Nepavyko išsaugoti failų",
+  "openFile": "Atidaryti",
+  "imageSelection": "Pasirinkite vaizdą arba naudokite kamerą",
+  "gallery": "Galerija",
+  "camera": "Kamera",
+  "errorCapturing": "Klaida fiksuojant vaizdą",
+  "errorGallery": "Klaida pasirenkant vaizdą",
+  "languageIcon": "Programos kalbos",
+  "text": "Atpažintas tekstas",
+  "errorText": "Klaida atpažįstant tekstą",
+  "txt": "Išsaugoti kaip TXT",
+  "pdf": "Išsaugoti kaip PDF",
+  "docx": "Išsaugoti kaip DOC",
+  "noSave": "Nėra teksto išsaugojimui",
+  "save": "Išsaugoti"
+}

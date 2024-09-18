@@ -1,0 +1,19 @@
+{
+  "appBar": "Pengimbas OCR",
+  "saveFiles": "Fail berjaya disimpan!",
+  "errorSaving": "Gagal menyimpan fail",
+  "openFile": "Buka",
+  "imageSelection": "Sila pilih imej atau gunakan Kamera",
+  "gallery": "Galeri",
+  "camera": "Kamera",
+  "errorCapturing": "Ralat semasa menangkap imej",
+  "errorGallery": "Ralat semasa memilih imej",
+  "languageIcon": "Bahasa Aplikasi",
+  "text": "Teks yang Diiktiraf",
+  "errorText": "Ralat dalam mengenali teks",
+  "txt": "Simpan sebagai TXT",
+  "pdf": "Simpan sebagai PDF",
+  "docx": "Simpan sebagai DOC",
+  "noSave": "Tiada teks untuk disimpan",
+  "save": "Simpan"
+}

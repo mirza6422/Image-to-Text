@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Kichanganua",
+  "saveFiles": "Faili zimehifadhiwa kwa mafanikio!",
+  "errorSaving": "Imeshindikana kuhifadhi faili",
+  "openFile": "Fungua",
+  "imageSelection": "Tafadhali chagua picha au tumia Kamera",
+  "gallery": "Matunzio",
+  "camera": "Kamera",
+  "errorCapturing": "Hitilafu wakati wa kunasa picha",
+  "errorGallery": "Hitilafu wakati wa kuchagua picha",
+  "languageIcon": "Lugha za programu",
+  "text": "Maandishi yaliyotambuliwa",
+  "errorText": "Hitilafu katika kutambua maandishi",
+  "txt": "Hifadhi kama TXT",
+  "pdf": "Hifadhi kama PDF",
+  "docx": "Hifadhi kama DOC",
+  "noSave": "Hakuna maandishi ya kuhifadhi",
+  "save": "Hifadhi"
+}

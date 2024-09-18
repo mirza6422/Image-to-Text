@@ -1,0 +1,19 @@
+{
+  "appBar": "Pindai OCR",
+  "saveFiles": "Berkas berhasil disimpan!",
+  "errorSaving": "Gagal menyimpan berkas",
+  "openFile": "Buka",
+  "imageSelection": "Silakan pilih gambar atau gunakan Kamera",
+  "gallery": "Galeri",
+  "camera": "Kamera",
+  "errorCapturing": "Kesalahan dalam menangkap gambar",
+  "errorGallery": "Kesalahan dalam memilih gambar",
+  "languageIcon": "Bahasa Aplikasi",
+  "text": "Teks yang dikenali",
+  "errorText": "Kesalahan dalam mengenali teks",
+  "txt": "Simpan sebagai TXT",
+  "pdf": "Simpan sebagai PDF",
+  "docx": "Simpan sebagai DOC",
+  "noSave": "Tidak ada teks untuk disimpan",
+  "save": "Simpan"
+}

@@ -1,0 +1,19 @@
+{
+  "appBar": "Skaner OCR",
+  "saveFiles": "Pliki zapisane pomyślnie!",
+  "errorSaving": "Nie udało się zapisać plików",
+  "openFile": "Otwórz",
+  "imageSelection": "Wybierz obraz lub użyj kamery",
+  "gallery": "Galeria",
+  "camera": "Kamera",
+  "errorCapturing": "Błąd podczas przechwytywania obrazu",
+  "errorGallery": "Błąd podczas wybierania obrazu",
+  "languageIcon": "Języki aplikacji",
+  "text": "Rozpoznany tekst",
+  "errorText": "Błąd rozpoznawania tekstu",
+  "txt": "Zapisz jako TXT",
+  "pdf": "Zapisz jako PDF",
+  "docx": "Zapisz jako DOC",
+  "noSave": "Brak tekstu do zapisania",
+  "save": "Zapisz"
+}

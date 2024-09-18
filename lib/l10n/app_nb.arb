@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR-skanner",
+  "saveFiles": "Filer lagret med suksess!",
+  "errorSaving": "Kunne ikke lagre filer",
+  "openFile": "Åpne",
+  "imageSelection": "Vennligst velg et bilde eller bruk kameraet",
+  "gallery": "Galleri",
+  "camera": "Kamera",
+  "errorCapturing": "Feil ved opptak av bilde",
+  "errorGallery": "Feil ved valg av bilde",
+  "languageIcon": "App-språk",
+  "text": "Gjenkjent tekst",
+  "errorText": "Feil ved gjenkjenning av tekst",
+  "txt": "Lagre som TXT",
+  "pdf": "Lagre som PDF",
+  "docx": "Lagre som DOC",
+  "noSave": "Ingen tekst å lagre",
+  "save": "Lagre"
+}

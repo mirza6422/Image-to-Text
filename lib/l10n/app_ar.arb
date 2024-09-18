@@ -1,0 +1,19 @@
+{
+  "appBar": "ماسح ضوئي OCR",
+  "saveFiles": "تم حفظ الملفات بنجاح!",
+  "errorSaving": "فشل في حفظ الملفات",
+  "openFile": "افتح",
+  "imageSelection": "يرجى تحديد صورة أو استخدام الكاميرا",
+  "gallery": "المعرض",
+  "camera": "الكاميرا",
+  "errorCapturing": "خطأ في التقاط الصورة",
+  "errorGallery": "خطأ في اختيار الصورة",
+  "languageIcon": "لغات التطبيق",
+  "text": "النص المعترف به",
+  "errorText": "خطأ في التعرف على النص",
+  "txt": "حفظ كـ TXT",
+  "pdf": "حفظ كـ PDF",
+  "docx": "حفظ كـ DOC",
+  "noSave": "لا يوجد نص للحفظ",
+  "save": "حفظ"
+}

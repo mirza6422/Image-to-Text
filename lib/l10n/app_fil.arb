@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Scanner",
+  "saveFiles": "Matagumpay na na-save ang mga file!",
+  "errorSaving": "Nabigo ang pag-save ng mga file",
+  "openFile": "Buksan",
+  "imageSelection": "Paki pili ang isang imahe o gamitin ang Camera",
+  "gallery": "Gallery",
+  "camera": "Kamera",
+  "errorCapturing": "Error sa pagkuha ng imahe",
+  "errorGallery": "Error sa pagpili ng imahe",
+  "languageIcon": "Mga Wika ng App",
+  "text": "Kinilalang Teksto",
+  "errorText": "Error sa pagkilala sa teksto",
+  "txt": "I-save bilang TXT",
+  "pdf": "I-save bilang PDF",
+  "docx": "I-save bilang DOC",
+  "noSave": "Walang tekstong mase-save",
+  "save": "I-save"
+}

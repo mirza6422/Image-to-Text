@@ -1,0 +1,19 @@
+{
+  "appBar": "I-OCR Iskena",
+  "saveFiles": "Amafayela agcinwe ngempumelelo!",
+  "errorSaving": "Amafayela awazange agcinwe",
+  "openFile": "Vula",
+  "imageSelection": "Sicela ukhethe isithombe noma usebenzise ikhamera",
+  "gallery": "Igalari",
+  "camera": "Ikhamera",
+  "errorCapturing": "Iphutha ekuthatheni isithombe",
+  "errorGallery": "Iphutha ekukhetheni isithombe",
+  "languageIcon": "Izilimi Zohlelo Lokusebenza",
+  "text": "Umbhalo Oqondakalayo",
+  "errorText": "Iphutha ekuboneni umbhalo",
+  "txt": "Gcina njenge-TXT",
+  "pdf": "Gcina njenge-PDF",
+  "docx": "Gcina njenge-DOC",
+  "noSave": "Ayikho imibhalo ezogcinwa",
+  "save": "Gcina"
+}

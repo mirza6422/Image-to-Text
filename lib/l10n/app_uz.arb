@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skanner",
+  "saveFiles": "Fayllar muvaffaqiyatli saqlandi!",
+  "errorSaving": "Fayllarni saqlashda xato",
+  "openFile": "Ochiq",
+  "imageSelection": "Iltimos, tasvirni tanlang yoki kamerani ishlating",
+  "gallery": "Galereya",
+  "camera": "Kamera",
+  "errorCapturing": "Tasvirni olishda xato",
+  "errorGallery": "Tasvirni tanlashda xato",
+  "languageIcon": "Ilova tillari",
+  "text": "Aniqlangan matn",
+  "errorText": "Matnni aniqlashda xato",
+  "txt": "TXT sifatida saqlash",
+  "pdf": "PDF sifatida saqlash",
+  "docx": "DOC sifatida saqlash",
+  "noSave": "Saqlash uchun matn yo'q",
+  "save": "Saqlash"
+}

@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR-Scanner",
+  "saveFiles": "Dateien erfolgreich gespeichert!",
+  "errorSaving": "Dateien konnten nicht gespeichert werden",
+  "openFile": "Öffnen",
+  "imageSelection": "Bitte wählen Sie ein Bild aus oder nutzen Sie die Kamera",
+  "gallery": "Galerie",
+  "camera": "Kamera",
+  "errorCapturing": "Fehler beim Aufnehmen des Bildes",
+  "errorGallery": "Fehler beim Auswählen des Bildes",
+  "languageIcon": "App-Sprachen",
+  "text": "Erkannter Text",
+  "errorText": "Fehler bei der Texterkennung",
+  "txt": "Als TXT speichern",
+  "pdf": "Als PDF speichern",
+  "docx": "Als DOC speichern",
+  "noSave": "Kein Text zum Speichern",
+  "save": "Speichern"
+}

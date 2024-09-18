@@ -1,0 +1,19 @@
+{
+  "appBar": "Scanner OCR",
+  "saveFiles": "File salvati con successo!",
+  "errorSaving": "Errore nel salvataggio dei file",
+  "openFile": "Apri",
+  "imageSelection": "Seleziona un'immagine o usa la fotocamera",
+  "gallery": "Galleria",
+  "camera": "Fotocamera",
+  "errorCapturing": "Errore durante l'acquisizione dell'immagine",
+  "errorGallery": "Errore nella selezione dell'immagine",
+  "languageIcon": "Lingue dell'app",
+  "text": "Testo riconosciuto",
+  "errorText": "Errore nel riconoscimento del testo",
+  "txt": "Salva come TXT",
+  "pdf": "Salva come PDF",
+  "docx": "Salva come DOC",
+  "noSave": "Nessun testo da salvare",
+  "save": "Salva"
+}

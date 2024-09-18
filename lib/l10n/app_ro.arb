@@ -1,0 +1,19 @@
+{
+  "appBar": "Scanner OCR",
+  "saveFiles": "Fișierele au fost salvate cu succes!",
+  "errorSaving": "Eșec la salvarea fișierelor",
+  "openFile": "Deschide",
+  "imageSelection": "Vă rugăm să selectați o imagine sau să folosiți camera",
+  "gallery": "Galerie",
+  "camera": "Cameră",
+  "errorCapturing": "Eroare la capturarea imaginii",
+  "errorGallery": "Eroare la selectarea imaginii",
+  "languageIcon": "Limbi aplicație",
+  "text": "Text recunoscut",
+  "errorText": "Eroare la recunoașterea textului",
+  "txt": "Salvează ca TXT",
+  "pdf": "Salvează ca PDF",
+  "docx": "Salvează ca DOC",
+  "noSave": "Nu există text de salvat",
+  "save": "Salvează"
+}

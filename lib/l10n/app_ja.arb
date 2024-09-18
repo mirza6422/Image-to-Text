@@ -1,0 +1,19 @@
+{
+  "appBar": "OCRスキャナー",
+  "saveFiles": "ファイルを正常に保存しました！",
+  "errorSaving": "ファイルの保存に失敗しました",
+  "openFile": "開く",
+  "imageSelection": "画像を選択するか、カメラを使用してください",
+  "gallery": "ギャラリー",
+  "camera": "カメラ",
+  "errorCapturing": "画像のキャプチャエラー",
+  "errorGallery": "画像の選択エラー",
+  "languageIcon": "アプリの言語",
+  "text": "認識されたテキスト",
+  "errorText": "テキストの認識エラー",
+  "txt": "TXTとして保存",
+  "pdf": "PDFとして保存",
+  "docx": "DOCとして保存",
+  "noSave": "保存するテキストがありません",
+  "save": "保存"
+}

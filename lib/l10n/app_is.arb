@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skanni",
+  "saveFiles": "Skrár vistaðar með góðum árangri!",
+  "errorSaving": "Mistókst að vista skrár",
+  "openFile": "Opna",
+  "imageSelection": "Vinsamlegast veldu mynd eða notaðu myndavélina",
+  "gallery": "Myndasafn",
+  "camera": "Myndavél",
+  "errorCapturing": "Villa við myndatöku",
+  "errorGallery": "Villa við val á mynd",
+  "languageIcon": "Tungumál forrits",
+  "text": "Viðurkennt texti",
+  "errorText": "Villa við að þekkja texta",
+  "txt": "Vista sem TXT",
+  "pdf": "Vista sem PDF",
+  "docx": "Vista sem DOC",
+  "noSave": "Enginn texti til að vista",
+  "save": "Vista"
+}

@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skanner",
+  "saveFiles": "Failid salvestati edukalt!",
+  "errorSaving": "Failide salvestamine ebaõnnestus",
+  "openFile": "Ava",
+  "imageSelection": "Palun valige pilt või kasutage kaamerat",
+  "gallery": "Galerii",
+  "camera": "Kaamera",
+  "errorCapturing": "Pildi jäädvustamisel tekkis viga",
+  "errorGallery": "Pildi valimisel tekkis viga",
+  "languageIcon": "Rakenduse keeled",
+  "text": "Tuvastatud tekst",
+  "errorText": "Tõrge teksti tuvastamisel",
+  "txt": "Salvesta TXT-na",
+  "pdf": "Salvesta PDF-na",
+  "docx": "Salvesta DOC-na",
+  "noSave": "Salvestamiseks pole teksti",
+  "save": "Salvesta"
+}

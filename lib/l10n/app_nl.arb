@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Scanner",
+  "saveFiles": "Bestanden succesvol opgeslagen!",
+  "errorSaving": "Kon bestanden niet opslaan",
+  "openFile": "Openen",
+  "imageSelection": "Selecteer een afbeelding of gebruik de camera",
+  "gallery": "Galerij",
+  "camera": "Camera",
+  "errorCapturing": "Fout bij het vastleggen van de afbeelding",
+  "errorGallery": "Fout bij het selecteren van de afbeelding",
+  "languageIcon": "App-talen",
+  "text": "Herkende tekst",
+  "errorText": "Fout bij het herkennen van tekst",
+  "txt": "Opslaan als TXT",
+  "pdf": "Opslaan als PDF",
+  "docx": "Opslaan als DOC",
+  "noSave": "Geen tekst om op te slaan",
+  "save": "Opslaan"
+}

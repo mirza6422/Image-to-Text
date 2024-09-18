@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skandeerder",
+  "saveFiles": "Lêers suksesvol gestoor!",
+  "errorSaving": "Kon nie lêers stoor nie",
+  "openFile": "Maak oop",
+  "imageSelection": "Kies asseblief 'n prent of gebruik Kamera",
+  "gallery": "Galery",
+  "camera": "Kamera",
+  "errorCapturing": "Fout met vaslegging van beeld",
+  "errorGallery": "Fout met kies van beeld",
+  "languageIcon": "App Tale",
+  "text": "Herkende teks",
+  "errorText": "Fout met herkenning van teks",
+  "txt": "Stoor as TXT",
+  "pdf": "Stoor as PDF",
+  "docx": "Stoor as DOC",
+  "noSave": "Geen teks om te stoor nie",
+  "save": "Stoor"
+}

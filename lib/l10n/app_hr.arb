@@ -1,0 +1,19 @@
+{
+  "appBar": "OCR Skeniranje",
+  "saveFiles": "Datoteke su uspješno spremljene!",
+  "errorSaving": "Spremanje datoteka nije uspjelo",
+  "openFile": "Otvori",
+  "imageSelection": "Odaberite sliku ili koristite kameru",
+  "gallery": "Galerija",
+  "camera": "Kamera",
+  "errorCapturing": "Greška pri snimanju slike",
+  "errorGallery": "Greška pri odabiru slike",
+  "languageIcon": "Jezici aplikacije",
+  "text": "Prepoznati tekst",
+  "errorText": "Greška u prepoznavanju teksta",
+  "txt": "Spremi kao TXT",
+  "pdf": "Spremi kao PDF",
+  "docx": "Spremi kao DOC",
+  "noSave": "Nema teksta za spremanje",
+  "save": "Spremi"
+}

@@ -1,0 +1,19 @@
+{
+  "appBar": "Escáner OCR",
+  "saveFiles": "Os ficheiros gardáronse correctamente!",
+  "errorSaving": "Fallou ao gardar os ficheiros",
+  "openFile": "Abrir",
+  "imageSelection": "Seleccione unha imaxe ou use a cámara",
+  "gallery": "Galería",
+  "camera": "Cámara",
+  "errorCapturing": "Erro ao capturar a imaxe",
+  "errorGallery": "Erro ao seleccionar a imaxe",
+  "languageIcon": "Idiomas da aplicación",
+  "text": "Texto recoñecido",
+  "errorText": "Erro ao recoñecer o texto",
+  "txt": "Gardar como TXT",
+  "pdf": "Gardar como PDF",
+  "docx": "Gardar como DOC",
+  "noSave": "Non hai texto para gardar",
+  "save": "Gardar"
+}

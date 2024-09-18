@@ -1,0 +1,19 @@
+{
+  "appBar": "סורק OCR",
+  "saveFiles": "הקבצים נשמרו בהצלחה!",
+  "errorSaving": "שמירת הקבצים נכשלה",
+  "openFile": "פתח",
+  "imageSelection": "בחר תמונה או השתמש במצלמה",
+  "gallery": "גלריה",
+  "camera": "מצלמה",
+  "errorCapturing": "שגיאה בלכידת התמונה",
+  "errorGallery": "שגיאה בבחירת התמונה",
+  "languageIcon": "שפות האפליקציה",
+  "text": "טקסט מזוהה",
+  "errorText": "שגיאה בזיהוי הטקסט",
+  "txt": "שמור כ-TXT",
+  "pdf": "שמור כ-PDF",
+  "docx": "שמור כ-DOC",
+  "noSave": "אין טקסט לשמירה",
+  "save": "שמור"
+}
