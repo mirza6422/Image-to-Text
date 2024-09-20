@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
 class ImageState extends ChangeNotifier {
@@ -30,12 +31,19 @@ class ImageState extends ChangeNotifier {
     notifyListeners();
   }
 
-  String _textController = '';
+  final textController = TextEditingController();
+  String _editTextController = '';
 
-  String get textController => _textController;
+  // TextEditingController get textController => _textController;
+  String get editTextController => _editTextController;
 
-  set textController(String value) {
-    _textController = value;
+  // set textController(String value) {
+  //   _textController = value;
+  //   notifyListeners();
+  // }
+
+  set editTextController(String value) {
+    _editTextController = value;
     notifyListeners();
   }
 
