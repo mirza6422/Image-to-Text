@@ -2,7 +2,9 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
+import 'package:image_to_text/state/image_state.dart';
 import 'package:pro_image_editor/pro_image_editor.dart';
+import 'package:provider/provider.dart';
 
 class ImageEditorScreen extends StatelessWidget {
   final File originalImage;
@@ -11,6 +13,7 @@ class ImageEditorScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final provider = Provider.of<ImageState>(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Image Editor'),
@@ -23,9 +26,11 @@ class ImageEditorScreen extends StatelessWidget {
             if (editedImage.isNotEmpty) {
               // Save the edited image and return
               final tempDir = Directory.systemTemp;
-              final file = File('${tempDir.path}/edited_image.png');
-              await file.writeAsBytes(editedImage as List<int>);
-              Navigator.pop(context, file);
+              final now = DateTime.now().millisecondsSinceEpoch;
+              final file = File('${tempDir.path}$now.png');
+              final image = await file.writeAsBytes(editedImage as List<int>);
+              provider.image = image;
+              Navigator.pop(context, image);
             } else {
               Navigator.pop(context);
             }

@@ -69,7 +69,7 @@ class _ImageCaptureState extends State<ImageCapture> {
 
   Future<void> _saveFile(
       ImageState imageProvider, String content, String extension) async {
-    if (imageProvider.textController.isEmpty) {
+    if (imageProvider.textController.text.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: const Duration(seconds: 1),
@@ -207,7 +207,8 @@ class _ImageCaptureState extends State<ImageCapture> {
   }
 
   void _handleSave(ImageState imageProvider, String extension) async {
-    await _saveFile(imageProvider, imageProvider.textController, extension);
+    await _saveFile(
+        imageProvider, imageProvider.textController.text, extension);
     if (mounted) {
       Navigator.pop(context);
       Navigator.of(context)
@@ -226,9 +227,10 @@ class _ImageCaptureState extends State<ImageCapture> {
       ),
     );
 
-    imageProvider.setEditedImage(result);
+    imageProvider.image = result;
   }
 
+  // PICK IMAGE FROM CAMERA
   Future<void> getImageFromCamera(ImageState imageProvider) async {
     try {
       var pickedFile = await picker.pickImage(source: ImageSource.camera);
@@ -245,6 +247,7 @@ class _ImageCaptureState extends State<ImageCapture> {
     }
   }
 
+  // Image Pick from Gallery
   Future<void> getImageFromGallery(ImageState imageProvider) async {
     try {
       var pickedFile = await picker.pickImage(source: ImageSource.gallery);
@@ -274,7 +277,7 @@ class _ImageCaptureState extends State<ImageCapture> {
 
       imageProvider.recognizedText = recognizedText.text;
       _textController.text = imageProvider.recognizedText;
-      imageProvider.textController = imageProvider.recognizedText;
+      imageProvider.textController.text = imageProvider.recognizedText;
 
       imageProvider.isProcessing = false;
     } catch (e) {
@@ -298,344 +301,339 @@ class _ImageCaptureState extends State<ImageCapture> {
     final width = MediaQuery.of(context).size.width;
     //final provider = Provider.of<ImageState>(context, listen: false);
 
-    return Material(
-      child: Consumer<ImageState>(
-        builder: (context, provider, child) {
-          return Scaffold(
-            resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.white,
-            appBar: AppBar(
-              foregroundColor: Colors.white,
-              shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20))),
-              backgroundColor: const Color(0xff0F67B1),
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: IconButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const AppLanguages(),
-                          ));
-                    },
-                    icon: const Icon(Icons.language_rounded),
-                    tooltip: AppLocalizations.of(context)!.languageIcon,
-                  ),
+    return Consumer<ImageState>(
+      builder: (context, provider, child) {
+        print(provider.image);
+        return Scaffold(
+          resizeToAvoidBottomInset: false,
+          backgroundColor: Colors.white,
+          appBar: AppBar(
+            foregroundColor: Colors.white,
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20))),
+            backgroundColor: const Color(0xff0F67B1),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const AppLanguages(),
+                        ));
+                  },
+                  icon: const Icon(Icons.language_rounded),
+                  tooltip: AppLocalizations.of(context)!.languageIcon,
                 ),
-              ],
-              title: Text(
-                AppLocalizations.of(context)!.appBar,
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold, color: Colors.white),
               ),
+            ],
+            title: Text(
+              AppLocalizations.of(context)!.appBar,
+              style: const TextStyle(
+                  fontWeight: FontWeight.bold, color: Colors.white),
             ),
-            body: Directionality(
-              textDirection: TextDirection.ltr,
-              child: Center(
-                child: Container(
-                  decoration: const BoxDecoration(color: Colors.white),
-                  height: height / 1.15,
-                  width: width,
-                  child: Stack(
-                    children: [
-                      AnimatedPositioned(
-                        duration: Duration.zero,
-                        top: 0,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            height: height / 2.8,
-                            width: width / 1.04,
-                            decoration: BoxDecoration(
-                              color: Colors.blue[200],
-                              borderRadius: BorderRadius.circular(20),
-                              boxShadow: [
-                                BoxShadow(
-                                    color: Colors.blueGrey.withOpacity(0.9),
-                                    blurRadius: 12,
-                                    blurStyle: BlurStyle.outer),
-                              ],
-                            ),
-                            child: provider.image == null
-                                ? Center(
-                                    child: Text(
-                                      textAlign: TextAlign.center,
-                                      AppLocalizations.of(context)!
-                                          .imageSelection,
-                                      style: const TextStyle(
-                                          fontStyle: FontStyle.italic,
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                  )
-                                : Stack(
-                                    children: [
-                                      Container(
-                                        height: height / 2.8,
-                                        width: width / 1.04,
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(20),
-                                          image: DecorationImage(
-                                            image: provider.editedImage != null
-                                                ? FileImage(
-                                                    provider.editedImage!)
-                                                : FileImage(provider.image!),
-                                            fit: BoxFit.fill,
-                                          ),
-                                        ),
-                                      ),
-                                      Positioned(
-                                        right: 4,
-                                        bottom: 4,
-                                        child: SpeedDial(
-                                          backgroundColor: Colors.blue[400],
-                                          tooltip: 'Edit Image',
-                                          onPress: () {
-                                            provider.setEditedImage(null);
-                                            _openImageEditor(provider);
-                                          },
-                                          icon: Icons.mode_edit_rounded,
-                                          iconTheme: const IconThemeData(
-                                              color: Colors.white, size: 40),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                          ),
-                        ),
-                      ),
-                      AnimatedPositioned(
-                          top: iskeyboardVisible ? 0 : height * 0.39,
-                          duration: const Duration(milliseconds: 200),
-                          child: Padding(
-                            padding: const EdgeInsets.all(8),
-                            child: provider.isProcessing
-                                ? SizedBox(
-                                    width: width,
-                                    height: 200,
-                                    child: const Center(
-                                        child: CircularProgressIndicator()))
-                                : Container(
-                                    height: height / 2.8,
-                                    width: width / 1.04,
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                        color: Colors.white),
-                                    child: provider.textController.isEmpty
-                                        ? const Center(
-                                            child: Text(
-                                            '',
-                                            style: TextStyle(
-                                              fontStyle: FontStyle.italic,
-                                              fontSize: 20,
-                                            ),
-                                          ))
-                                        : provider.errorMessage.isNotEmpty
-                                            ? Text(
-                                                provider.errorMessage,
-                                                style: const TextStyle(
-                                                    color: Colors.red),
-                                              )
-                                            : TextFormField(
-                                                autocorrect: true,
-                                                cursorOpacityAnimates: true,
-                                                textCapitalization:
-                                                    TextCapitalization
-                                                        .sentences,
-                                                textDirection:
-                                                    TextDirection.ltr,
-                                                textAlign: TextAlign.justify,
-                                                controller:
-                                                    TextEditingController(
-                                                  text: provider.image != null
-                                                      ? provider.textController
-                                                      : _textController.text,
-                                                ),
-                                                scrollController:
-                                                    _scrollController,
-                                                maxLines: null,
-                                                decoration: InputDecoration(
-                                                  border: OutlineInputBorder(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            20),
-                                                  ),
-                                                  // focusedBorder: InputBorder.none,
-                                                  floatingLabelAlignment:
-                                                      FloatingLabelAlignment
-                                                          .center,
-                                                  label: Text(
-                                                    AppLocalizations.of(
-                                                            context)!
-                                                        .text,
-                                                    style: const TextStyle(
-                                                        color: Colors.blue,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 18),
-                                                  ),
-                                                ),
-                                              )),
-                          )),
-                      AnimatedPositioned(
-                        bottom: 0,
-                        left: 0.1,
-                        right: 0.1,
-                        duration: Duration.zero,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              FloatingActionButton(
-                                  mini: true,
-                                  tooltip:
-                                      AppLocalizations.of(context)!.gallery,
-                                  onPressed: () {
-                                    provider.setEditedImage(null);
-                                    getImageFromGallery(provider);
-                                  },
-                                  heroTag: 'galleryButton',
-                                  backgroundColor: Colors.white,
-                                  shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: const Icon(
-                                    Icons.photo_library_rounded,
-                                    color: Colors.blue,
-                                    size: 30,
-                                  )),
-                              FloatingActionButton(
-                                backgroundColor: Colors.blue,
-                                tooltip: AppLocalizations.of(context)!.camera,
-                                onPressed: () {
-                                  provider.setEditedImage(null);
-                                  getImageFromCamera(provider);
-                                },
-                                heroTag: 'cameraButton',
-                                child: const Icon(
-                                  Icons.camera_alt_rounded,
-                                  size: 55,
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SpeedDial(
-                                closeDialOnPop: true,
-                                useRotationAnimation: true,
-                                direction: SpeedDialDirection.up,
-                                tooltip: AppLocalizations.of(context)!.save,
-                                curve: Curves.bounceInOut,
-                                animationDuration:
-                                    const Duration(milliseconds: 300),
-                                spaceBetweenChildren: 0,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(15)),
-                                backgroundColor: Colors.white,
-                                icon: Icons.save_alt_rounded,
-                                buttonSize: const Size(40, 40),
-                                iconTheme: const IconThemeData(
-                                    size: 40, color: Colors.blue),
-                                children: [
-                                  SpeedDialChild(
-                                    // onTap: () => Navigator.pop(context),
-                                    labelWidget: ElevatedButton(
-                                      style: const ButtonStyle(
-                                          backgroundColor:
-                                              WidgetStatePropertyAll(
-                                                  Colors.blue)),
-                                      onPressed: () {
-                                        _handleSave(provider, 'txt');
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            AppLocalizations.of(context)!.txt,
-                                            style: const TextStyle(
-                                                color: Colors.white),
-                                          ),
-                                          const SizedBox(
-                                            width: 10,
-                                          ),
-                                          const Icon(
-                                            Icons.text_fields_rounded,
-                                            color: Colors.white,
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  SpeedDialChild(
-                                    labelWidget: ElevatedButton(
-                                      style: ButtonStyle(
-                                          backgroundColor:
-                                              WidgetStatePropertyAll(
-                                                  Colors.red[400])),
-                                      onPressed: () {
-                                        _handleSave(provider, 'pdf');
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            AppLocalizations.of(context)!.pdf,
-                                            style: const TextStyle(
-                                                color: Colors.white),
-                                          ),
-                                          const SizedBox(
-                                            width: 10,
-                                          ),
-                                          const Icon(
-                                            Icons.picture_as_pdf_rounded,
-                                            color: Colors.white,
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  SpeedDialChild(
-                                    labelWidget: ElevatedButton(
-                                      style: ButtonStyle(
-                                          backgroundColor:
-                                              WidgetStatePropertyAll(
-                                                  Colors.green[400])),
-                                      onPressed: () {
-                                        _handleSave(provider, 'docx');
-                                      },
-                                      child: Row(
-                                        children: [
-                                          Text(
-                                            AppLocalizations.of(context)!.docx,
-                                            style: const TextStyle(
-                                                color: Colors.white),
-                                          ),
-                                          const SizedBox(
-                                            width: 9,
-                                          ),
-                                          const Icon(
-                                            Icons.edit_document,
-                                            color: Colors.white,
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              )
+          ),
+          body: Directionality(
+            textDirection: TextDirection.ltr,
+            child: Center(
+              child: Container(
+                decoration: const BoxDecoration(color: Colors.white),
+                height: height / 1.15,
+                width: width,
+                child: Stack(
+                  children: [
+                    AnimatedPositioned(
+                      duration: Duration.zero,
+                      top: 0,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: height / 2.8,
+                          width: width / 1.04,
+                          decoration: BoxDecoration(
+                            color: Colors.blue[200],
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.blueGrey.withOpacity(0.9),
+                                  blurRadius: 12,
+                                  blurStyle: BlurStyle.outer),
                             ],
                           ),
+                          child: provider.image == null
+                              ? Center(
+                                  child: Text(
+                                    textAlign: TextAlign.center,
+                                    AppLocalizations.of(context)!
+                                        .imageSelection,
+                                    style: const TextStyle(
+                                        fontStyle: FontStyle.italic,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              : Stack(
+                                  children: [
+                                    Container(
+                                      height: height / 2.8,
+                                      width: width / 1.04,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                        image: DecorationImage(
+                                          image: FileImage(provider.image!),
+                                          fit: BoxFit.fill,
+                                        ),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      right: 4,
+                                      bottom: 4,
+                                      child: SpeedDial(
+                                        backgroundColor: Colors.blue[400],
+                                        tooltip: 'Edit Image',
+                                        onPress: () {
+                                          _openImageEditor(provider);
+                                          provider.setEditedImage(null);
+                                        },
+                                        icon: Icons.mode_edit_rounded,
+                                        iconTheme: const IconThemeData(
+                                            color: Colors.white, size: 40),
+                                      ),
+                                    ),
+                                  ],
+                                ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    AnimatedPositioned(
+                        top: iskeyboardVisible ? 0 : height * 0.39,
+                        duration: const Duration(milliseconds: 200),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8),
+                          child: provider.isProcessing
+                              ? SizedBox(
+                                  width: width,
+                                  height: 200,
+                                  child: const Center(
+                                      child: CircularProgressIndicator()))
+                              : Container(
+                                  height: height / 2.8,
+                                  width: width / 1.04,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.white),
+                                  child: provider.textController.text.isEmpty
+                                      ? const Center(
+                                          child: Text(
+                                          '',
+                                          style: TextStyle(
+                                            fontStyle: FontStyle.italic,
+                                            fontSize: 20,
+                                          ),
+                                        ))
+                                      : provider.errorMessage.isNotEmpty
+                                          ? Text(
+                                              provider.errorMessage,
+                                              style: const TextStyle(
+                                                  color: Colors.red),
+                                            )
+                                          : TextFormField(
+                                              autocorrect: true,
+                                              // autofocus: true,
+                                              cursorOpacityAnimates: true,
+                                              textCapitalization:
+                                                  TextCapitalization.sentences,
+                                              textDirection: TextDirection.ltr,
+                                              textAlign: TextAlign.justify,
+                                              onChanged: (value) {
+                                                provider.textController.text =
+                                                    value;
+                                              },
+                                              onSaved: (value) {
+                                                print(value);
+                                              },
+                                              controller: TextEditingController(
+                                                text: provider.image != null
+                                                    ? provider
+                                                        .textController.text
+                                                    : 'empty text',
+                                              ),
+                                              scrollController:
+                                                  _scrollController,
+                                              maxLines: null,
+                                              decoration: InputDecoration(
+                                                border: OutlineInputBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(20),
+                                                ),
+                                                // focusedBorder: InputBorder.none,
+                                                floatingLabelAlignment:
+                                                    FloatingLabelAlignment
+                                                        .center,
+                                                label: Text(
+                                                  AppLocalizations.of(context)!
+                                                      .text,
+                                                  style: const TextStyle(
+                                                      color: Colors.blue,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 18),
+                                                ),
+                                              ),
+                                            )),
+                        )),
+                    AnimatedPositioned(
+                      bottom: 0,
+                      left: 0.1,
+                      right: 0.1,
+                      duration: Duration.zero,
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            FloatingActionButton(
+                                mini: true,
+                                tooltip: AppLocalizations.of(context)!.gallery,
+                                onPressed: () {
+                                  provider.setEditedImage(null);
+                                  getImageFromGallery(provider);
+                                },
+                                heroTag: 'galleryButton',
+                                backgroundColor: Colors.white,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: const Icon(
+                                  Icons.photo_library_rounded,
+                                  color: Colors.blue,
+                                  size: 30,
+                                )),
+                            FloatingActionButton(
+                              backgroundColor: Colors.blue,
+                              tooltip: AppLocalizations.of(context)!.camera,
+                              onPressed: () {
+                                provider.setEditedImage(null);
+                                getImageFromCamera(provider);
+                              },
+                              heroTag: 'cameraButton',
+                              child: const Icon(
+                                Icons.camera_alt_rounded,
+                                size: 55,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SpeedDial(
+                              closeDialOnPop: true,
+                              useRotationAnimation: true,
+                              direction: SpeedDialDirection.up,
+                              tooltip: AppLocalizations.of(context)!.save,
+                              curve: Curves.bounceInOut,
+                              animationDuration:
+                                  const Duration(milliseconds: 300),
+                              spaceBetweenChildren: 0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15)),
+                              backgroundColor: Colors.white,
+                              icon: Icons.save_alt_rounded,
+                              buttonSize: const Size(40, 40),
+                              iconTheme: const IconThemeData(
+                                  size: 40, color: Colors.blue),
+                              children: [
+                                SpeedDialChild(
+                                  // onTap: () => Navigator.pop(context),
+                                  labelWidget: ElevatedButton(
+                                    style: const ButtonStyle(
+                                        backgroundColor: WidgetStatePropertyAll(
+                                            Colors.blue)),
+                                    onPressed: () {
+                                      _handleSave(provider, 'txt');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          AppLocalizations.of(context)!.txt,
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        const Icon(
+                                          Icons.text_fields_rounded,
+                                          color: Colors.white,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SpeedDialChild(
+                                  labelWidget: ElevatedButton(
+                                    style: ButtonStyle(
+                                        backgroundColor: WidgetStatePropertyAll(
+                                            Colors.red[400])),
+                                    onPressed: () {
+                                      _handleSave(provider, 'pdf');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          AppLocalizations.of(context)!.pdf,
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        const Icon(
+                                          Icons.picture_as_pdf_rounded,
+                                          color: Colors.white,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                SpeedDialChild(
+                                  labelWidget: ElevatedButton(
+                                    style: ButtonStyle(
+                                        backgroundColor: WidgetStatePropertyAll(
+                                            Colors.green[400])),
+                                    onPressed: () {
+                                      _handleSave(provider, 'docx');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          AppLocalizations.of(context)!.docx,
+                                          style: const TextStyle(
+                                              color: Colors.white),
+                                        ),
+                                        const SizedBox(
+                                          width: 9,
+                                        ),
+                                        const Icon(
+                                          Icons.edit_document,
+                                          color: Colors.white,
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-          );
-        },
-      ),
+          ),
+        );
+      },
     );
   }
 }
